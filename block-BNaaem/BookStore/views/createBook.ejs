@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title> bookStore </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <header>
+      <div class="flex">
+       <a class="" href="/"><h1 class="home">BookStore</h1></a>
+       <a class="btn" href="/api/v1/books">Back</a>
+      </div>
+   </header>
+      <div class="container1 ">
+        <form action="/api/v1/books" method="POST" class="top-50 form" enctype="multipart/form-data">
+            <h1 class="form-heading textalign f-weight">Book Details</h1>
+            <input class="formInput" type="text" name="title" placeholder="Enter title">
+            <textarea name="summary" id="" cols="" rows="5" placeholder="write summary"></textarea>
+            <input class="formInput" type="text" name="pages" placeholder="Enter pages">
+            <input class="formInput" type="text" name="publication" placeholder="Enter publication">
+            <input class="formInput" type="text" name="categories" placeholder="Enter categories">
+            <input class="formInput" type="number" name="price" placeholder="Enter price">
+            <input class="formInput" type="number" name="quantity" placeholder="Enter quantity">
+            <input class="formInput" type="text" name="tags" placeholder="Enter tags">
+            <!-- <input class="formInput" type="text" name="cover_image" placeholder="Enter image_url"> -->
+            <input class="formInput" type="file" name="cover_image" placeholder="Enter image_url" id="cover_image">
+            <h1 class="form-heading textalign f-weight">Author Details</h1>
+            <input class="formInput" type="text" name="authorName" placeholder="Enter name">
+            <input class="formInput" type="email" name="email" placeholder="Enter email">
+            <input class="formInput" type="text" name="country" placeholder="Enter country name">
+            <div class="textalign">
+                <input class="btn" type="submit" value="Add Book">
+            </div>
+        </form>
+      </div>
+  </body>
+</html>

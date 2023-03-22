@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title> bookStore </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <header>
+      <div class="flex">
+       <a class="" href="/"><h1 class="home">BookStore</h1></a>
+       <a class="btn" href="/api/v1/books/<%= comment.bookId %>">Back</a>
+      </div>
+   </header>
+    <div class="container1">
+        <form  action="/api/v2/comment/<%= comment.id %>" method="POST" class="">
+           <h2>Update Comment</h2>
+            <textarea name="comment" id="" cols="" rows="5" class="textarea-comment" placeholder="Write comment">
+            <%= comment.comment %>
+            </textarea>
+            <div>
+                <input class="btn btn-2" type="submit" value="Update comment">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> bookStore </title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <header>
+    <div class="flex">
+      <a class="" href="/">
+        <h1 class="home">BookStore</h1>
+      </a>
+      <a class="btn" href="/api/v1/books">
+        <h1 class="">Back</h1>
+      </a>
+      <a class="btn" href="/api/v1/books/new">Add book</a>
+    </div>
+  </header>
+  <div class="container">
+
+    <div class=" top-20">
+      <figure><img src="/images/<%=book.cover_image%>" alt="<%= book.title %>"></figure>
+      <h2 class="title f-weight">
+        <%= book.title %>
+      </h2>
+      <small class="author f-weight blue">By: <%= book.authorName %> (</small>
+      <small class="author f-weight">
+        <%= book.authorId.email %>,
+      </small>
+      <small class="author f-weight">
+        <%= book.authorId.country %>)
+      </small>
+      <h2 class="font-20 f-weight red">Publiser by:<%= book.publication %>
+      </h2>
+
+      <div>
+
+        <% book.categories.forEach(category=>{ %>
+
+          <span>
+            <%= category %>
+          </span>
+          <% }) %>
+      </div>
+      <h2 class=" f-weight margin-b-10 red">Price:<%= book.price %>/-</h2>
+      <h2 class=" f-weight margin-b-10 blue">Quantity:<%= book.quantity %></h2>
+      <h2 class=" f-weight margin-b-10 blue">Tags:<%= book.tags %></h2>
+      <h2 class=" f-weight margin-b-10 ">Pages:<%= book.pages %></h2>
+      
+
+      <p><small class="red font-20">About the book:-</small><br>
+        <%= book.summary %>
+      </p>
+
+      <a class="btn  btn-b" href="/api/v1/books/<%= book._id %>/edit">Edit</a>
+      <a class="btn  btn-b" href="/api/v1/books/<%= book._id %>/delete">Delete</a>
+
+    </div>
+    <!-- comment -->
+    <form action="/api/v1/books/<%=book._id %>/comment" method="POST" class="commentForm">
+      <textarea name="comment" id="" cols="" rows="2" placeholder="Write comment"></textarea>
+      <input class="commentInput" type="text" name="name" placeholder="Enter name">
+      <input type="submit" value="comment">
+      <hr>
+    </form>
+    <% book.commentId.forEach(ele=>{ %>
+      <p>@<%= ele.name %></p>
+      <small><%= ele.comment %></small>
+      <a class=" btn btn2" href="/api/v2/comment/<%= ele._id %>/edit">edit</a>
+      <a class=" btn btn2" href="/api/v2/comment/<%= ele._id %>/delete">delete</a>
+      <hr>
+    <% }) %>
+  </div>
+</body>
+
+</html>

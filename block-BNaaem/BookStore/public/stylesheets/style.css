@@ -1,0 +1,238 @@
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* *********** */
+
+body{
+  background-color: rgb(198, 222, 243);
+}
+
+header{
+  background-color: darkcyan;
+  padding: 10px 0;
+}
+
+/* .header-heading{
+  font-size: 30px;
+  font-weight: 700;
+  color: black;
+  border: 1px solid red;
+  padding: 5px;
+} */
+
+.container{
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.container1{
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 20px;
+}
+
+.wrap{
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.book-div{
+  width: 22%;
+}
+
+a{
+  text-decoration: none;
+}
+
+.f-weight{
+  font-weight: 7000;
+}
+
+.font-20{
+  font-size: 20px;
+}
+
+.textalign{
+  text-align: center;
+}
+
+.padding-l{
+  padding-left: 20px;
+}
+
+.top-50{
+  margin-top: 50px;
+}
+
+.top-20{
+  margin-top: 20px;
+}
+
+.margin-10{
+  margin: 10px 0;
+}
+
+.margin-b-10{
+  margin-bottom: 10px;
+}
+
+.red{
+  color: rgb(236, 129, 129);
+}
+
+.blue{
+  color: cornflowerblue;
+}
+
+.home{
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.home-page{
+  padding: 100px 0;
+  border-radius: 10px;
+  background-color: cornflowerblue;
+}
+
+.home-page-heading{
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+
+.btn{
+  background-color: aquamarine;
+  padding: 7px 20px;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+.btn2{
+  padding: 1px 10px;
+  background-color: rgb(197, 197, 233);
+}
+
+/* ***from book ** */
+.form{
+  box-shadow: 0px 0px 10px white;
+  background-color: white;
+  padding: 20px;
+}
+
+textarea,.formInput{
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.formInput{
+  height: 40px;
+}
+
+.form-heading{
+  font-size: 24px;
+  color:rgb(72, 116, 250);
+  margin-bottom: 10px;
+}
+
+/* book store */
+
+.title{
+  font-size: 30px;
+}
+
+.author{
+  font-size: 20px;
+  margin:5px 0 20px 0;
+  font-style: italic;
+}
+
+/* book */
+span{
+  background-color: aqua;
+  color: black;
+  padding: 5px 10px;
+  margin: 10px 5px 10px 0px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+small{
+  display: inline-block;
+  margin: 10px 0;
+}
+
+.btn-b{
+  display: inline-block;
+  margin: 20px;
+}
+
+.search-bar{
+  border-radius: 20px;
+  height: 30px;
+}
+
+.search{
+  width: 200px;
+  height: 30px;
+  border-radius: 10px;
+}
+
+/* comment form */
+.commentForm{
+  width: 250px;
+}

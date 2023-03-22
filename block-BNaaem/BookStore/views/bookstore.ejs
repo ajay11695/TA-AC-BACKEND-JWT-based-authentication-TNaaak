@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> bookStore </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <header>
+       <div class="flex">
+        <a class="" href="/"><h1 class="home">BookStore</h1></a>
+        <a class="btn" href="/api/v1/books/new">Add book</a>
+        <a class="btn" href="/api/v1/books">All book</a>
+        <form action="/api/v1/books/search" method="POST">
+          <input class="search-bar padding-l" type="text" placeholder="Enter bookname..." name="book">
+          <input type="submit" value="Search">
+        </form>
+       </div>
+    </header>
+
+   
+
+    <% if(books.length){ %>
+
+      <div class="flex">
+        <form action="/api/v1/books/category" method="POST" class=" top-20">
+          <h1 class="f-weight font-20 textalign margin-10">Filter by category</h1>
+          <select name="category" id="" class="search padding-l">
+            <option value="Fiction">Fiction</option>
+            <option value="Adventure">Adventure</option>
+            <option value="Technology">Technology</option>
+            <option value="Motivation">Motivation</option>
+          </select>
+          <input type="submit" value="searched">
+        </form>
+  
+        <form action="/api/v1/books/tags" method="POST" class=" top-20">
+          <h1 class="f-weight font-20 textalign margin-10">Filter by Tag</h1>
+          <select name="tags" id="" class="search padding-l">
+            <% tags.forEach(tag=>{ %>
+              <option value="<%= tag %>"><%= tag %></option>
+            <% }) %>
+          </select>
+          <input type="submit" value="searched">
+        </form>
+      </div>
+    
+      <div class="flex wrap">
+        <% books.forEach(book=>{ %>
+          
+         <div class="textalign top-20 book-div">
+          <figure><img src="/images/<%=book.cover_image %>" alt="<%= book.title %>"></figure>
+          <h2 class="title f-weight"><%= book.title %></h2>
+          <h3 class="author f-weight"><%= book.authorName %></h3>
+          <a class="btn top-2" href="/api/v1/books/<%= book._id %>">Show</a>
+         </div>
+
+       <% }) %>
+      </div>
+      <% }else{ %>
+        <div class="textalign">
+        <h1 class="top-50">No Book Found</h1>
+        <a class="btn btn-b" href="/api/v1/books/">Back</a>
+        </div>
+        <% } %>
+  </body>
+</html>

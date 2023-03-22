@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title> bookStore </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <header>
+      <div class="flex">
+       <a class="" href="/"><h1 class="home">BookStore</h1></a>
+       <a class="btn" href="/api/v1/books/<%= book._id %>">Back</a>
+      </div>
+   </header>
+      <div class="container1 ">
+        <form action="/api/v1/books/<%= book._id %>" method="POST" class="top-50 form" enctype="multipart/form-data">
+            <h1 class="form-heading textalign f-weight">Book Details</h1>
+            <input class="formInput" type="text" name="title" placeholder="Enter title" value="<%= book.title %>">
+            <textarea name="summary" id="" cols="" rows="5" placeholder="write summary"><%= book.summary %></textarea>
+            <input class="formInput" type="text" name="pages" placeholder="Enter pages" value="<%= book.pages %>">
+            <input class="formInput" type="text" name="publication" placeholder="Enter publication" value="<%= book.publication %>">
+            <input class="formInput" type="text" name="categories" placeholder="Enter categories" value="<%= book.categories %>">
+            <input class="formInput" type="number" name="price" placeholder="Enter price" value="<%= book.price %>">
+            <input class="formInput" type="number" name="quantity" placeholder="Enter quantity" value="<%= book.quantity %>">
+            <input class="formInput" type="text" name="tags" placeholder="Enter tags" value="<%= book.tags %>">
+
+            <input class="formInput" type="file" name="cover_image" placeholder="Enter image_url" id="cover_image">
+            <input type="hidden" name="cover_image" value="<%= book.cover_image %>">
+            <h1 class="form-heading textalign f-weight">Author Details</h1>
+            <input class="formInput" type="text" name="authorName" placeholder="Enter name" value="<%= book.authorName %>">
+            <input class="formInput" type="email" name="email" placeholder="Enter email" value="<%= book.authorId.email %>">
+            <input class="formInput" type="text" name="country" placeholder="Enter country name" value="<%= book.authorId.country %>">
+            <div class="textalign">
+                <input class="btn" type="submit" value="Add Book">
+            </div>
+        </form>
+      </div>
+  </body>
+</html>   
